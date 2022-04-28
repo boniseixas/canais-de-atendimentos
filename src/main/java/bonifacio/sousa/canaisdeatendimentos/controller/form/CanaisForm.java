@@ -29,8 +29,10 @@ public class CanaisForm {
 	public void setTipo(String tipo) {
 		this.tipo = tipo;
 	}
+	
 	public CanaisDeAtendimentoEletronico converter() {
 		
-		return new CanaisDeAtendimentoEletronico(tipo, nome);
+		return new CanaisDeAtendimentoEletronico(nome, tipo);
 	}
+	
 }
