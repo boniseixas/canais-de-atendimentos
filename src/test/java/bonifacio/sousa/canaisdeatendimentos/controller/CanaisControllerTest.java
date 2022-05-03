@@ -41,7 +41,7 @@ class CanaisControllerTest {
 	}
 
 	@Test
-	void TestaCanaisController() {
+	void testaCanaisController() {
 		CanaisController mock = Mockito.mock(CanaisController.class);
 		List<CanaisDeAtendimentoEletronicoDto> list = mock.canais(null);
 		
@@ -53,7 +53,7 @@ class CanaisControllerTest {
 	}
 	
 	@Test
-	void ChamaUmaListaDeCanaisDeAtendimentoEletronico () {
+	void chamaUmaListaDeCanaisDeAtendimentoEletronico () {
 		CanaisController mock = Mockito.mock(CanaisController.class);
 		List<CanaisDeAtendimentoEletronicoDto> list = mock.canais(null);
 		
@@ -62,7 +62,7 @@ class CanaisControllerTest {
 	}
 	
 	@Test
-	void CadastraUmCanalDeAtendimentoEletronico () {
+	void cadastraUmCanalDeAtendimentoEletronico () {
 		CanaisController mock = Mockito.mock(CanaisController.class);
 		List<CanaisDeAtendimentoEletronicoDto> cadastro = mock.canais(null);
 		ResponseEntity.created(null);
@@ -75,7 +75,7 @@ class CanaisControllerTest {
 	}
 
 	@Test
-	void DetalhaUmCanalDeAtendimentoEletronico () {
+	void detalhaUmCanalDeAtendimentoEletronico () {
 		CanaisController mock = Mockito.mock(CanaisController.class);
 		List<CanaisDeAtendimentoEletronicoDto> detalha = mock.canais(null);
 		ResponseEntity.ok(null);
@@ -88,7 +88,7 @@ class CanaisControllerTest {
 	}
 	
 	@Test
-	void AtualizaUmCanalDeAtendimentoEletronico () {
+	void atualizaUmCanalDeAtendimentoEletronico () {
 		CanaisController mock = Mockito.mock(CanaisController.class);
 		List<CanaisDeAtendimentoEletronicoDto> atualiza = mock.canais(null);
 		ResponseEntity.ok(null);
@@ -101,7 +101,7 @@ class CanaisControllerTest {
 	}
 	
 	@Test
-	void RemoveUmCanalDeAtendimentoEletronico () {
+	void removeUmCanalDeAtendimentoEletronico () {
 		CanaisController mock = Mockito.mock(CanaisController.class);
 		List<CanaisDeAtendimentoEletronicoDto> remove = mock.canais(null);
 		ResponseEntity.ok(null);
