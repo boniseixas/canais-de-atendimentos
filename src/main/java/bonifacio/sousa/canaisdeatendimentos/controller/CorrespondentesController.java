@@ -29,8 +29,13 @@ import bonifacio.sousa.canaisdeatendimentos.tipos.CorrespondentesBancarios;
 @RequestMapping("/correspondentes-bancarios")
 public class CorrespondentesController {
 	
-	@Autowired
+	//criado um construtor para os testes
 	private CorrespondentesRepository correspondentesRepository;
+	
+	@Autowired
+	public CorrespondentesController(CorrespondentesRepository correspondentesRepository) {
+		this.correspondentesRepository = correspondentesRepository;
+	}
 	
 	@GetMapping
 	public List<CorrespondentesBancariosDto> correspondentes(String nomeDoCorrespondente) {
