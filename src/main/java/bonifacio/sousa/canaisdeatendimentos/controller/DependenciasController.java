@@ -29,8 +29,13 @@ import bonifacio.sousa.canaisdeatendimentos.tipos.DependenciasProprias;
 @RequestMapping("/dependencias-proprias")
 public class DependenciasController {
 	
-	@Autowired
+	//criado construtor para os testes
 	private DependenciasRepository dependenciasRepository;
+	
+	@Autowired
+	public DependenciasController(DependenciasRepository dependenciasRepository) {
+		this.dependenciasRepository = dependenciasRepository;
+	}
 	
 	@GetMapping
 	public List<DependenciasPropriasDto> dependencias(String localidade) {

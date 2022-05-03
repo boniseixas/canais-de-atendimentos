@@ -29,8 +29,13 @@ import bonifacio.sousa.canaisdeatendimentos.tipos.TerminalDeAutoatendimentoCompa
 @RequestMapping("/terminal-de-autoatendimento-compartilhado")
 public class TerminalController {
 	
-	@Autowired
+	//criado um construtor para os testes
 	private TerminalRepository terminalRepository;
+	
+	@Autowired
+	public TerminalController(TerminalRepository terminalRepository) {
+		this.terminalRepository = terminalRepository;
+	}
 
 	@GetMapping
 	public List<TerminalDeAutoatendimentoCompartilhadoDto> terminal(String localidade) {
