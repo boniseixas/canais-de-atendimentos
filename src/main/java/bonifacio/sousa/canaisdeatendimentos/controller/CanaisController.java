@@ -89,8 +89,8 @@ public class CanaisController {
 		Optional<CanaisDeAtendimentoEletronico> optional = canaisRepository.findById(id);
 		if(optional.isPresent()) {
 			canaisRepository.deleteById(id);
-			//return ResponseEntity.ok().build(); //Não retorna mensagem
-			return ResponseEntity.ok("Operação realizada com sucesso!"); //Retorna a mensagem
+			return ResponseEntity.ok().build(); //Não retorna mensagem
+			//return ResponseEntity.ok("Operação realizada com sucesso!"); //Retorna a mensagem
 		}
 		
 		return ResponseEntity.notFound().build();
